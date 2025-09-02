@@ -5,4 +5,11 @@ const connection=mysql.createConnection({
     database:"school_db",
     password:""
  });
+ connection.connect((err) => {
+  if (err) {
+    console.error("DB Connection Failed:", err);
+  } else {
+    console.log("Connected to MySQL DB");
+  }
+});
  module.exports=connection;
